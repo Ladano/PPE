@@ -12,7 +12,6 @@ namespace MenuLearning
 		[SerializeField] private List<Material> _materials = new List<Material>();
 		[SerializeField] private Color _colorUnactive;
 		[SerializeField] private Color _colorActive;
-		[SerializeField] private SpriteRenderer _sprite;
 
 		private float _currentState;
 		private float CurrentState
@@ -56,8 +55,7 @@ namespace MenuLearning
 			}
 
 			Color color = Color.Lerp(_colorUnactive, _colorActive, CurrentState);
-			_materials.ForEach( a => a.SetColor("_SpecColor", color) );
-			_sprite.color = color;
+			_materials.ForEach( a => a.SetColor("_node_36", color) );
 		}
 
 		public void Click()
