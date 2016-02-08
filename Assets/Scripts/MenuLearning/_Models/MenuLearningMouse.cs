@@ -3,38 +3,21 @@ using System.Collections;
 
 namespace MenuLearning
 {
-	public class MenuLearningMouse : MonoBehaviour
+	public class MenuLearningMouse : BaseMouseCastController
 	{
-		public static event System.Action<MenuLearningModel> OnModelFocus;
+		public static event System.Action<BaseSceneModel> OnModelFocus;
 
-		[SerializeField] private Camera _camera;
-		public bool IsActive = false;
-
-		private void Update()
+		protected override void OnUpdate()
 		{
-			if(IsActive)
+			BaseSceneModel model = GetFocusedModel();
+			if(OnModelFocus!=null)
 			{
-				MenuLearningModel model = GetFocusedModel();
-				if(OnModelFocus!=null)
-				{
-					OnModelFocus(model);
-				}
-				if(model!=null && Input.GetMouseButtonDown(0))
-				{
-					model.Click();
-				}
+				OnModelFocus(model);
 			}
-		}
-
-		private MenuLearningModel GetFocusedModel()
-		{
-			Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
-			if(Physics.Raycast(ray, out hit))
+			if(model!=null && Input.GetMouseButtonDown(0))
 			{
-				return hit.collider.gameObject.GetComponent<MenuLearningModel>();
+				model.Click();
 			}
-			return null;
 		}
 	}
 }

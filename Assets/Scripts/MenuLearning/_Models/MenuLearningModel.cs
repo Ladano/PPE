@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MenuLearning
 {
-	public class MenuLearningModel : MonoBehaviour
+	public class MenuLearningModel : BaseSceneModel
 	{
 		private const float FadeStape = 0.084f;
 
@@ -31,7 +31,7 @@ namespace MenuLearning
 			MenuLearningMouse.OnModelFocus -= ModelFocus;
 		}
 
-		private void ModelFocus(MenuLearningModel model)
+		private void ModelFocus(BaseSceneModel model)
 		{
 			if(model==this)
 			{
@@ -58,7 +58,7 @@ namespace MenuLearning
 			_materials.ForEach( a => a.SetColor("_node_36", color) );
 		}
 
-		public void Click()
+		public override void Click()
 		{
 			MenuLearningSceneController.Instance.LoadLearning(_typeOfPPE);
 		}

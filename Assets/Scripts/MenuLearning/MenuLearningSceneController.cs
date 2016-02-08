@@ -11,7 +11,7 @@ namespace MenuLearning
 		[SerializeField] private List<MenuLearningModelData> _models = new List<MenuLearningModelData>();
 		[SerializeField] private List<AbstractButton> _buttons = new List<AbstractButton>();
 		[SerializeField] private AbstractButton _backButton;
-		[SerializeField] private MenuLearningMouse _mouseController;
+		[SerializeField] private BaseMouseCastController _mouseController;
 		private MenuLearningSceneState _currentSceneState = MenuLearningSceneState.menu;
 
 		protected override void OnAwake()
