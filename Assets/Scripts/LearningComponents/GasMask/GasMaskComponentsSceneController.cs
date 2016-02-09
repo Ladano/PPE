@@ -9,7 +9,8 @@ namespace LearningComponents
 {
 	public class GasMaskComponentsSceneController : AbstactSceneController<GasMaskComponentsSceneController>
 	{
-		[SerializeField] private Text _label;
+		[SerializeField] private Text _labelTitle;
+		[SerializeField] private Text _labelDescription;
 		private List<ComponentData> _components = new List<ComponentData>();
 
 		protected override void OnAwake()
@@ -32,11 +33,13 @@ namespace LearningComponents
 			ComponentData data = _components.FirstOrDefault( a => a.ComponentId==id );
 			if(data!=null)
 			{
-				_label.text = data.ComponentDescription;
+				_labelTitle.text = data.ComponentTitle;
+				_labelDescription.text = data.ComponentDescription;
 			}
 			else
 			{
-				_label.text = "";
+				_labelTitle.text = "";
+				_labelDescription.text = "";
 			}
 		}
 	}
