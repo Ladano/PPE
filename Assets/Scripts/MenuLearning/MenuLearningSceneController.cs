@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using LearningComponents;
 
 namespace MenuLearning
 {
@@ -47,14 +48,8 @@ namespace MenuLearning
 			switch(Mode)
 			{
 			case MenuLearningMode.componentsPPE:
-				if(typeOfPPE==TypeOfPPE.gasMask)
-				{
-					LevelChanger.Instance.StartLoadLevel(LevelId.GasMaskComponents);
-				}
-				else
-				{
-					LevelChanger.Instance.StartLoadLevel(LevelId.ProtectiveSuitComponents);
-				}
+				LearningSceneLoader.TypePPE = typeOfPPE;
+				LevelChanger.Instance.StartLoadLevel(LevelId.LearningComponents);
 				break;
 			}
 		}

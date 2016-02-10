@@ -1,0 +1,20 @@
+[
+  {
+    "TypePPE": "gasMask",
+    "ItemModelResourcesPath": "GasMask/GasMask",
+    "ItemComponentsResourcesPath": "GasMask/GasMaskComponents",
+    "ItemStartRotation": 20,
+    "ItemModelStartRotation": 20,
+    "ItemMinXRotation": 0,
+    "ItemMaxXRotation": 60
+  },
+  {
+    "TypePPE": "protectiveSuit",
+    "ItemModelResourcesPath": "ProtectiveSuit/ProtectiveSuit",
+    "ItemComponentsResourcesPath": "ProtectiveSuit/ProtectiveSuitComponents",
+    "ItemStartRotation": 0,
+    "ItemModelStartRotation": 270,
+    "ItemMinXRotation": 0,
+    "ItemMaxXRotation": 0
+  }
+]

@@ -9,7 +9,14 @@ namespace LearningComponents
 		[SerializeField] private float _mouseRotateSpeed = 0.5f;
 		[SerializeField] private Transform _rotatedItem;
 		private Vector3 _cachedMousePosition;
+		private float _minXRotation;
+		private float _maxXRotation;
 
+		public void Init(float minXRotation, float maxXRotation)
+		{
+			_minXRotation = minXRotation;
+			_maxXRotation = maxXRotation;
+		}
 
 		private void Update()
 		{
@@ -57,7 +64,7 @@ namespace LearningComponents
 
 		private void RotateItem(Vector2 angle)
 		{
-			_rotatedItem.rotation = Quaternion.Euler(new Vector3(Mathf.Clamp(_rotatedItem.rotation.eulerAngles.x + angle.x, 0.0f, 60.0f),
+			_rotatedItem.rotation = Quaternion.Euler(new Vector3(Mathf.Clamp(_rotatedItem.rotation.eulerAngles.x + angle.x, _minXRotation, _maxXRotation),
 			                                                     _rotatedItem.rotation.eulerAngles.y + angle.y,
 			                                                     _rotatedItem.rotation.eulerAngles.z));
 		}

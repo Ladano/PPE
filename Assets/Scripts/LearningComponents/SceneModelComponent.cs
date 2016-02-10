@@ -9,7 +9,7 @@ namespace LearningComponents
 
 		public override void Click()
 		{
-			GasMaskComponentsSceneController.Instance.ChooseComponent(_componentId);
+			PointersSceneController.Instance.ChooseComponent(_componentId);
 		}
 	}
 }

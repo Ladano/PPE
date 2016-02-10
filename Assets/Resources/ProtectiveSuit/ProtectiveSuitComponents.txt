@@ -1,0 +1,55 @@
+{
+  "CommonInfo": "Защитный костюм Л-1 – легкий защитный костюм, предназначен для использования в качестве универсальной специальной одежды персонала при защите кожных покровов человека, одежды и обуви от воздействия:\n- твердых, жидких, капельно-аэрозольных отравляющих веществ;\n- взвесей, аэрозолей, вредных биологических факторов;\n- радиоактивной пыли.",
+  "ComponentsInfo": [
+    {
+      "ComponentId": 1,
+      "ComponentTitle": "1 – Куртка",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 2,
+      "ComponentTitle": "2 – Капюшон",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 3,
+      "ComponentTitle": "3 – Шейный хлястик",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 4,
+      "ComponentTitle": "4 – Петля",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 5,
+      "ComponentTitle": "5 – Промежный хлястик",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 6,
+      "ComponentTitle": "6 – Сумка",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 7,
+      "ComponentTitle": "7 – Полукомбинезон",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 8,
+      "ComponentTitle": "8 – Боты",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 9,
+      "ComponentTitle": " 9 – Хлястикиа",
+      "ComponentDescription": ""
+    },
+    {
+      "ComponentId": 10,
+      "ComponentTitle": "10 – Перчатки",
+      "ComponentDescription": ""
+    }
+  ]
+}

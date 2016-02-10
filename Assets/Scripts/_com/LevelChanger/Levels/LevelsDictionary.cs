@@ -10,9 +10,7 @@ namespace LevelsData
 		{
 			{ new LevelData(LevelId.MenuMain, "MenuMain") },
 			{ new LevelData(LevelId.MenuLearning, "MenuLearning") },
-			{ new LevelData(LevelId.MenuExamination, "MenuExamination") },
-			{ new LevelData(LevelId.GasMaskComponents, "GasMaskComponents") },
-			{ new LevelData(LevelId.ProtectiveSuitComponents, "ProtectiveSuitComponents") }
+			{ new LevelData(LevelId.LearningComponents, "LearningComponents") }
 		};
 
 		public static LevelId CurrentLevel
