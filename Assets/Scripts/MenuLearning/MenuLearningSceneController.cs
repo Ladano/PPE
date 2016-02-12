@@ -53,11 +53,11 @@ namespace MenuLearning
 				LevelChanger.Instance.StartLoadLevel(LevelId.LearningComponents);
 				break;
 			case MenuLearningMode.wearPPE:
-				VideoDemonstrationController.VideoId = (typeOfPPE==TypeOfPPE.gasMask) ? 0 : 3;
+				VideoDemonstrationController.VideoId = (typeOfPPE==TypeOfPPE.gasMask) ? 0 : 1;
 				LevelChanger.Instance.StartLoadLevel(LevelId.VideoDemonstration);
 				break;
 			case MenuLearningMode.withdrawPPE:
-				VideoDemonstrationController.VideoId = (typeOfPPE==TypeOfPPE.gasMask) ? 1 : 2;
+				VideoDemonstrationController.VideoId = (typeOfPPE==TypeOfPPE.gasMask) ? 2 : 3;
 				LevelChanger.Instance.StartLoadLevel(LevelId.VideoDemonstration);
 				break;
 			}
