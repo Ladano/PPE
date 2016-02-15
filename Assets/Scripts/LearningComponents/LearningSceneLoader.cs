@@ -10,7 +10,7 @@ namespace LearningComponents
 	{
 		private const string ConfigFilePath = "ItemsConfig";
 
-		public static TypeOfPPE TypePPE = TypeOfPPE.protectiveSuit;
+		public static TypeOfPPE TypePPE = TypeOfPPE.gasMask;
 
 		[SerializeField] private Transform _item;
 		[SerializeField] private ItemMoveController _itemMoveController;

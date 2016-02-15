@@ -9,6 +9,10 @@ namespace LearningComponents
 {
 	public class PointersSceneController : AbstactSceneController<PointersSceneController>
 	{
+		public static event System.Action<int> OnComponentChoose;
+
+		public Color ColorUnactive;
+		public Color ColorActive;
 		[SerializeField] private Text _labelCommonInfo;
 		[SerializeField] private Text _labelComponentTitle;
 		[SerializeField] private Text _labelComponentDescription;
@@ -42,6 +46,11 @@ namespace LearningComponents
 			{
 				_labelComponentTitle.text = "";
 				_labelComponentDescription.text = "";
+			}
+
+			if(OnComponentChoose!=null)
+			{
+				OnComponentChoose(id);
 			}
 		}
 	}

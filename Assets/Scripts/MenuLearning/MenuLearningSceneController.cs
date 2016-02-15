@@ -64,7 +64,6 @@ namespace MenuLearning
 				LevelChanger.Instance.StartLoadLevel(LevelId.VideoDemonstration);
 				break;
 			}
-			FindObjectsOfType<MenuLearningModel>().ToList().ForEach( a => a.SetDefaultColor() );
 		}
 	}
 
