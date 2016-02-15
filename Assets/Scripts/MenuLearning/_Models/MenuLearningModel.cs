@@ -62,5 +62,10 @@ namespace MenuLearning
 		{
 			MenuLearningSceneController.Instance.LoadLearning(_typeOfPPE);
 		}
+
+		public void SetDefaultColor()
+		{
+			_materials.ForEach( a => a.SetColor("_node_36", _colorUnactive) );
+		}
 	}
 }

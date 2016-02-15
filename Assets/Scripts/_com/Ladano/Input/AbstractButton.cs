@@ -7,7 +7,7 @@ public abstract class AbstractButton : MonoBehaviour
 
 	private void Awake()
 	{
-		transform.localScale = (IsShowed) ? Vector3.one : Vector3.zero;
+		transform.localScale = (IsShowed) ? transform.localScale : Vector3.zero;
 	}	
 
 	public void MouseClick()

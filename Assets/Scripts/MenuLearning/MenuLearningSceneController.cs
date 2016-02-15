@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using LearningComponents;
@@ -53,14 +54,17 @@ namespace MenuLearning
 				LevelChanger.Instance.StartLoadLevel(LevelId.LearningComponents);
 				break;
 			case MenuLearningMode.wearPPE:
+				VideoDemonstrationController.IsFirstStart = true;
 				VideoDemonstrationController.VideoId = (typeOfPPE==TypeOfPPE.gasMask) ? 0 : 1;
 				LevelChanger.Instance.StartLoadLevel(LevelId.VideoDemonstration);
 				break;
 			case MenuLearningMode.withdrawPPE:
+				VideoDemonstrationController.IsFirstStart = true;
 				VideoDemonstrationController.VideoId = (typeOfPPE==TypeOfPPE.gasMask) ? 2 : 3;
 				LevelChanger.Instance.StartLoadLevel(LevelId.VideoDemonstration);
 				break;
 			}
+			FindObjectsOfType<MenuLearningModel>().ToList().ForEach( a => a.SetDefaultColor() );
 		}
 	}
 
